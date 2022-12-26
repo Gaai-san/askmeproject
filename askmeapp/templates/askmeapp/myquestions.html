@@ -1,0 +1,44 @@
+{% extends 'askmeapp/base.html' %}
+
+{% block content %}
+
+
+<!--Start of All Questions-->
+<div style="background: #A0E4CB" class="container-fluid">
+    <div class="row justify-content-center">
+        <div class="col-lg-8 col-md-8 col-sm-10 col-xs-10">
+            <br><br><br>
+            <div class="accordion" id="accordion-4">
+                <br>
+                <h2 class="text-center">My Questions</h2>
+                <p class="text-center">Your question will be in public once Gaai replies.
+                    <br>
+                    Click your questions to edit/delete.</p>
+
+                <ul>
+                    {% for mine in mines %}
+                    <a href="{% url 'checkmines' mine.id %}">
+                    <li>
+                        {{ mine.title }}
+                    </li>
+                    </a>
+                    {% endfor %}
+                </ul>
+            </div>
+            <br>       
+            <p class="text-center"><a class="btn btn-warning" href="{% url 'askquestion' %}" role="button">Ask Questions &raquo;</a></p>
+
+
+        </div>
+    </div>
+</div>
+<!--End of My Questions-->
+
+
+{% endblock %}
+
+
+
+
+
+

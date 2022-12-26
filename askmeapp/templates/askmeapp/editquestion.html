@@ -1,0 +1,65 @@
+{% extends 'askmeapp/base.html' %}
+{% load static %}
+{% block extra_head %}
+  <link rel="stylesheet" href="{% static 'css/signin.css'%}">
+{% endblock %}
+
+{% block content %}
+
+
+<div class="wrapper fadeInDown">
+    <div id="formContent">
+      <!-- Tabs Titles -->
+  
+      <!-- Icon -->
+      <div class="fadeIn first">
+        <img src="/media/gaai_icon.png" width="50" height="60" class="d-inline-block align-top" alt="">
+        <p>Edit</p>
+        {{ error }}
+      </div>
+  
+      <!-- Login Form -->
+      <form method="POST">
+        {% csrf_token %}
+        <h5>Title</h5>
+        <div type="text" id="login" class="fadeIn second" name="username" placeholder="username">{{ form.title }}</div>
+        <h5>Detail</h5>
+        <div type="text" id="login" class="fadeIn second" name="username" placeholder="username">{{ form.detail }}</div>
+        <div type="text" id="login" class="fadeIn second" name="username" placeholder="username">Urgent to be answered? {{ form.urgent }}</div>
+        <input type="submit" class="fadeIn fourth" value="Save">
+        <p style="color:rgb(32, 99, 254)">{{ error }}</p>
+      </form>
+  
+      <!-- Remind Passowrd -->
+      <div id="formFooter">
+        <a class="underlineHover" href="{% url 'myquestions' %}">Go back to My Questions</a>
+      </div>
+  
+    </div>
+  </div>
+
+
+
+<br>
+{{ edit.title }}
+
+<form method="POST">
+{% csrf_token %}
+{{ form.as_p }}
+<button type="submit">Save</button>
+</form>
+
+
+<form method="POST" action="{% url 'deletequestion' edit.id %}">
+    {% csrf_token %}
+<button type="submit">Delete</button>
+</form>
+
+
+
+
+
+
+
+
+{% endblock %}

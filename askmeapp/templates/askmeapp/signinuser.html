@@ -1,0 +1,39 @@
+{% extends 'askmeapp/base.html' %}
+{% load static %}
+{% block extra_head %}
+  <link rel="stylesheet" href="{% static 'css/signin.css'%}">
+{% endblock %}
+
+{% block content %}
+
+
+
+<div class="wrapper fadeInDown">
+    <div id="formContent">
+      <!-- Tabs Titles -->
+  
+      <!-- Icon -->
+      <br>
+      <div class="fadeIn first">
+        <img src="/media/gaai_icon.png" width="50" height="60" class="d-inline-block align-top" alt="">
+        <p>How are you?</p>
+      </div>
+  
+      <!-- Login Form -->
+      <form action="{% url 'signinuser' %}" method="POST">
+        {% csrf_token %}
+        <input type="text" id="login" class="fadeIn second" name="username" placeholder="login">
+        <input type="text" id="password" class="fadeIn third" name="password" placeholder="password">
+        <input type="submit" class="fadeIn fourth" value="Sign In">
+        <p style="color:rgb(32, 99, 254)">{{ error }}</p>
+      </form>
+  
+      <!-- Remind Passowrd -->
+      <div id="formFooter">
+        <a class="underlineHover" href="{% url 'signupuser' %}">Forgot Password? (Make a new one)</a>
+      </div>
+  
+    </div>
+  </div>
+
+{% endblock %}

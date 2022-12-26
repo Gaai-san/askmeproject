@@ -1,0 +1,31 @@
+{% extends 'askmeapp/base.html' %}
+
+{% block content %}
+
+<!--Start of Delete-->
+<div style="background: #A0E4CB" class="container-fluid">
+    <div class="row justify-content-center">
+        <div class="col-lg-8 col-md-8 col-sm-10 col-xs-10">
+            <br><br><br>
+            <div class="accordion" id="accordion-4">
+                <br>
+                <h2 class="text-center">Delete</h2>
+                <h4 class="text-center">Are you sure to delete "{{ question.title }}"??</h4>
+                <br>
+
+                <form class="text-center" method="POST" action="{% url 'deletequestion' question.id %}">
+                    {% csrf_token %}
+                <button type="submit">Yes, I will delete it.</button>
+                </form>
+                <br>
+ 
+            </div>
+
+
+        </div>
+    </div>
+</div>
+<!--End of Delete-->
+
+
+{% endblock %}
