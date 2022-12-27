@@ -45,6 +45,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
@@ -164,9 +165,7 @@ if not DEBUG:
         os.path.join(BASE_DIR, 'static'),
     )
 
-    MIDDLEWARE += [
-        'whitenoise.middleware.WhiteNoiseMiddleware',
-    ]
+
 
     # HerokuのConfigを読み込み
     django_heroku.settings(locals())
