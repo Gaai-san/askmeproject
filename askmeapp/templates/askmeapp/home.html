@@ -21,7 +21,6 @@
         class="rounded-circle" src="http://deafshiru.org/wp-content/uploads/2022/12/top_image.png" alt="Generic placeholder image" width="160" height="160">
         <h2>I'm Gaai</h2>
         <p>An English high school teacher in Japan. Ask me any question and I will answer it with my full honesty. There is no so-called taboo topic haha.</p>
-        <p>My interests are: education, disability, language, fishing, web development, sports, romance, etc </p>
         {% if user.is_authenticated %}
         <p><a class="btn btn-warning" href="{% url 'askquestion' %}" role="button">Ask Questions &raquo;</a>
             <a class="btn btn-success" href="{% url 'myquestions' %}" role="button">My Questions</a>
@@ -29,6 +28,8 @@
         <p><a class="btn btn-warning" href="{% url 'signupuser' %}" role="button">Sign up &raquo;</a>
             <a class="btn btn-success" href="{% url 'signinuser' %}" role="button">Sign in to ask</a></p>
         {% endif %}
+        <p>My interests are: education, disability, language, fishing, web development, sports, romance, etc </p>
+
       </div>
     </div> 
 </div> 
