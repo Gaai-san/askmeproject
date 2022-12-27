@@ -149,7 +149,7 @@ MEDIA_ROOT = BASE_DIR / "media"
 LOGIN_URL = 'signinuser'
 
 
-
+DEBUG = False
 
 
 try:
@@ -169,7 +169,7 @@ if not DEBUG:
 
     # Static files (CSS, JavaScript, Images)
     STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-    STATIC_URL = '/staticfiles/'
+    STATIC_URL = '/static/'
 
     # Extra places for collectstatic to find static files.
     STATICFILES_DIRS = (
