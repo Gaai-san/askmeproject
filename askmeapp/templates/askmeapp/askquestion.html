@@ -27,8 +27,6 @@
                 {% csrf_token %}
                 <h5>Title</h5>
                 <div type="text" id="login" class="fadeIn second">{{ form.title }}</div>
-                <h5>Detail</h5>
-                <div style="max-width: 400px;" type="text" id="login" class="fadeIn second">{{ form.detail }}</div>
                 <div type="text" id="login" class="fadeIn second">Urgent to be answered? {{ form.urgent }}</div>
                 <input type="submit" class="fadeIn fourth" value="SEND!">
                 <p style="color:rgb(32, 99, 254)">{{ error }}</p>
