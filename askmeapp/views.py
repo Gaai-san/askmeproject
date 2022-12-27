@@ -60,12 +60,12 @@ def allquestions(request):
     allquestions = AskmeModel.objects.all().order_by('-datecreated')
     question_names = request.GET.get('question_names')
 
-    letter_list = ['a', 'b', 'c', 'd', 'e']
+    letter_list = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h','i', 'j']
 
     if question_names != '' and question_names is not None:
         allquestions = allquestions.filter(title__icontains=question_names)
 
-    paginator = Paginator(allquestions, 6)
+    paginator = Paginator(allquestions, 10)
     page = request.GET.get('page')
     allquestions = paginator.get_page(page)    
     return render(request, 'askmeapp/allquestions.html', {'allquestions': allquestions, 'letter_list': letter_list})
