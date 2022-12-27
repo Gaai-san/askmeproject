@@ -139,7 +139,7 @@ LOGIN_URL = 'signinuser'
 
 
 
-DEBUG = False
+
 
 try:
     # 存在する場合、ローカルの設定読み込み
