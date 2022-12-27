@@ -46,28 +46,27 @@
                 {% for question, letter in allquestions|zip:letter_list %}
                 {% if question.datecompleted %}
                 <div class="card">
-                <div class="card-header" id="header-4{{ letter }}">
-                    <button class="btn btn-link" type="button"
-                        data-toggle="collapse" data-target="#card-4{{ letter }}"
-                        aria-expanded="true" aria-controls="card-4{{ letter }}">
-                        <li>{{ question.title }}</li>
-                    </button>
-                </div>
-                <div id="card-4{{ letter }}" class="collapse"
-                    aria-labelledby="header-4{{ letter }}" data-parent="#accordion-4">
-                    <div class="card-body">
-                    {{ question.answer }}
+                    <div class="card-header" id="header-4{{ letter }}">
+                        <button class="btn btn-link" type="button"
+                            data-toggle="collapse" data-target="#card-4{{ letter }}"
+                            aria-expanded="true" aria-controls="card-4{{ letter }}">
+                            <li>{{ question.title }}</li>
+                        </button>
+                    </div>
+                    <div id="card-4{{ letter }}" class="collapse"
+                        aria-labelledby="header-4{{ letter }}" data-parent="#accordion-4">
+                        <div class="card-body">
+                        {{ question.answer }}
+                
                     </div>
                 </div>
-                </div>
-                {% endif %}
-                {% endfor %}
-                <br>       
-                <p class="text-center"><a class="btn btn-warning" href="{% url 'allquestions' %}"  role="button">Check all questions &raquo;</a></p>
-                <br>
+                    {% endif %}
+                    {% endfor %}
+                    <br>       
+                    <p class="text-center"><a class="btn btn-warning" href="{% url 'allquestions' %}"  role="button">Check all questions &raquo;</a></p>
+                    <br>
+
             </div>
-
-
         </div>
     </div>
 </div>
