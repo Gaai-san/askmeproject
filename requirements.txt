@@ -80,6 +80,7 @@ Django==4.1.1
 django-boost==2.1
 django-cors-headers==3.13.0
 django-embed-video==1.4.7
+django-heroku==0.3.1
 djangorestframework==3.14.0
 docutils @ file:///opt/concourse/worker/volumes/live/c87e10af-317d-45cb-7142-3d02053858ee/volume/docutils_1620827978243/work
 easy-thumbnails==2.8.3
@@ -216,7 +217,8 @@ prompt-toolkit @ file:///tmp/build/80754af9/prompt-toolkit_1633440160888/work
 Protego @ file:///tmp/build/80754af9/protego_1598657180827/work
 protobuf==3.19.1
 psutil @ file:///opt/concourse/worker/volumes/live/da41f1b1-060b-47fa-4c17-557e069ead1d/volume/psutil_1612298011002/work
-psycopg2-binary==2.9.5
+psycopg2==2.9.5
+psycopg2-binary==2.8.6
 ptyprocess @ file:///tmp/build/80754af9/ptyprocess_1609355006118/work/dist/ptyprocess-0.7.0-py2.py3-none-any.whl
 pure-eval @ file:///opt/conda/conda-bld/pure_eval_1646925070566/work
 py @ file:///opt/conda/conda-bld/py_1644396412707/work
@@ -278,6 +280,7 @@ Scrapy @ file:///opt/concourse/worker/volumes/live/87e33744-bf9b-430d-6c07-6bef3
 seaborn @ file:///tmp/build/80754af9/seaborn_1629307859561/work
 Send2Trash @ file:///tmp/build/80754af9/send2trash_1632406701022/work
 service-identity @ file:///Users/ktietz/demo/mc3/conda-bld/service_identity_1629460757137/work
+setuptools-pipfile==0.7.0
 sip==4.19.13
 six @ file:///tmp/build/80754af9/six_1644875935023/work
 smart-open @ file:///tmp/build/80754af9/smart_open_1623928409369/work
@@ -349,4 +352,3 @@ yarl @ file:///opt/concourse/worker/volumes/live/8e0192c5-7b7d-47fe-5cfd-fadef81
 zict==2.0.0
 zipp @ file:///opt/conda/conda-bld/zipp_1641824620731/work
 zope.interface @ file:///opt/concourse/worker/volumes/live/8c2d4bd1-6406-47f0-45ce-890992bafbf6/volume/zope.interface_1625036159007/work
-psycopg2==2.7.6.1
