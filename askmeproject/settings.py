@@ -27,7 +27,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
+
+SECRET_KEY = "django-insecure-sd1wj1+7&3gi6z(=&tbi=5c==5e7d!z4b-i)t1t@xx$_f7v5tj"
 
 
 # Application definition
@@ -123,6 +125,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
@@ -137,8 +140,6 @@ LOGIN_URL = 'signinuser'
 
 
 
-
-DEBUG = False
 
 try:
     # 存在する場合、ローカルの設定読み込み
